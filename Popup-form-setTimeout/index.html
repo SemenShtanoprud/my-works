@@ -1,0 +1,46 @@
+	<!DOCTYPE html>
+	<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+	<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+	<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+	<!--[if (gte IE 9)|!(IE)]><!--><html lang="ru"> <!--<![endif]-->
+	<head>
+		<meta charset="UTF-8">
+		<title>setTimeout/jquery.cookie</title>
+
+		<link rel="stylesheet" href="app.css" />
+	</head>
+	<body>
+
+		<section class="top_header">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<h1>Popup form</h1>
+					</div>
+				</div>
+			</div>
+		</section>
+		<div id="bg_popup" class="container_form">
+			<div class="container_form_popup">
+				<img src="kvartira.png" alt="" class="form_img">
+				<form  id="test">
+					<h2>Хочешь квартиру <span>бесплатно</span>?</h2>
+					<input type="text" name="names" placeholder="Имя" required="">
+					<input type="text" id="phones" name="phones" placeholder="Телефон" required="">
+					<input value="отправить" type="submit" class="container_form_button"> 
+				</form>
+				<a class="modalVideo-close setCookie" onclick="document.getElementById('bg_popup').style.display='none'; return false;" id="setCookie"><span class="modal_span">×</span></a>
+			</div>
+		</div>
+
+	<!--[if lt IE 9]>
+	<script src="libs/html5shiv/es5-shim.min.js"></script>
+	<script src="libs/html5shiv/html5shiv.min.js"></script>
+	<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>
+	<script src="libs/respond/respond.min.js"></script>
+	<![endif]-->
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script src="jquery.cookie.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>
