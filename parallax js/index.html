@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta char set="UTF-8">
+	<title>Parallax</title> 
+	<style>
+		body{
+			margin: 0;
+		}
+		section{
+			height: 100vh;
+			background-color: #666;
+			position: relative;
+			overflow: hidden;
+		}
+		.sec{
+			-webkit-background-size: cover;
+			background-size: cover;
+		}
+		.sec_1{
+			background-image: url(img_1.jpg);
+		}
+		.header_text {
+			color: #fff;
+			display: inline-block;
+			font-size: 40px;
+			font-weight: bold;
+			height: 40px;
+			text-align: center;
+			text-transform: uppercase;
+			width: 240px;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-left: -120px;
+			margin-top: -20px;
+			z-index: 5;
+		}
+		.sec_2 {
+			background-image: url(img_2.jpg);
+		}
+		.sec_2 .header_text{
+			top: 0%;
+		}
+		.sec_3 {
+			background-image: url(img_3.jpg);
+		}
+	</style>
+</head>
+<body>
+
+	<section class="sec_1 sec">
+		<div class="header_text">
+			Some Text
+		</div>
+	</section>
+	<section class="sec_2 sec">
+		<div class="header_text">
+			Some Text
+		</div>
+	</section>
+
+	<section class="sec_3 sec">
+		<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur quibusdam, quae voluptates consequuntur a. Accusantium placeat alias exercitationem ea nam iste, ipsa tempora eos. Mollitia optio, dicta. Obcaecati, voluptatibus, molestias!</div>
+		<div>Corporis mollitia soluta optio saepe nulla debitis accusantium est reprehenderit sint ab aperiam explicabo labore fugit aliquam necessitatibus voluptatem, animi exercitationem voluptatibus deleniti consequuntur asperiores repellendus fugiat rem distinctio hic.</div>
+		<div>Ab amet dolorum ex delectus eius incidunt odio nulla omnis sequi placeat sunt, doloribus facere iure, rerum earum porro et mollitia veritatis consequatur hic. Laborum odio dolor, ducimus ab nemo.</div>
+		<div>Veniam ipsam officia deleniti, eaque assumenda saepe provident incidunt beatae est nobis, soluta mollitia quasi explicabo laudantium nesciunt suscipit nemo voluptatum rem autem excepturi. Modi est, vero dolorum sint dolore.</div>
+		<div>Atque, tenetur excepturi incidunt sint sit adipisci tempora ex fugiat beatae maxime. Autem ex non illum. Sit dignissimos minus pariatur eveniet aut alias quam quidem nemo, ad veritatis adipisci assumenda!</div>
+		<div>Delectus similique, voluptate distinctio quam iusto id, libero ea. Fuga distinctio sit atque, dolores unde culpa, quidem, deserunt voluptatem quis quasi possimus nobis temporibus? Excepturi, nisi earum rem dolor itaque.</div>
+		<div>Non vero excepturi quam, sint numquam repellendus expedita nam. Molestiae deleniti, sed. Sint eius quaerat veritatis quod, voluptatum, harum consectetur magni placeat veniam consequuntur, obcaecati accusamus repudiandae corrupti! Doloremque, velit.</div>
+		<div>Nam sunt corporis aliquid eos nobis cupiditate earum minus adipisci a porro, magnam eaque reprehenderit accusamus, neque quasi iusto in! Aliquam illo aspernatur nulla quos facere culpa natus ut perspiciatis.</div>
+		<div>Architecto ipsa reiciendis vel voluptatibus. Et explicabo repellat tempora assumenda facilis delectus incidunt sint debitis dolorum voluptates, aliquid commodi consequatur porro quasi nesciunt neque aperiam, voluptatem obcaecati, autem pariatur molestias.</div>
+		<div>Enim et molestias inventore beatae perspiciatis quis. At quas fuga sed repudiandae consequatur, molestias facere natus delectus non ex! Sit, expedita, omnis. Placeat, sapiente! Non, modi, dicta. Iure, cumque repellendus!</div>
+	</section>
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+	$(window).scroll(function() {
+		var st = $(this).scrollTop();
+
+		$(".header_text").css({
+			"transform" : "translate(0%, " + st + "%"
+		});
+
+		$(".sec_2 img").css({
+			"transform" : "translate(0%, " + st/20 + "%"
+		});
+	});
+</script>
+	
+</body>
+</html>
