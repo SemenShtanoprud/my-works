@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Parallax mousemove</title>
+
+	<style>
+		* { box-sizing: border-box; }
+
+		html, body {
+			margin: 0;
+			padding: 0;
+		}
+
+		.container {
+			position: relative;
+			overflow: hidden;
+			display: block;
+			height: 100vh;
+		}
+
+		.wrapper {
+			width: 110%;
+			height: 120vh;
+			display: block;
+
+			position: relative;
+			left: -5vw;
+			top: -5vh;
+
+			background-image: url(img_1.jpg);
+			background-position-x: 0; /* from -10vw to 10vw */
+			background-position-y: 0;
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+	</style>
+</head>
+<body>
+ 
+<div class="container">
+	<div class="wrapper parallax_1611"></div>
+</div>
+
+<script>
+function nearSide(offset, sideWidth){
+	return 5 - (offset / sideWidth * 5);
+}
+
+function farSide(offset, sideWidth){
+	var localX = offset - sideWidth ;	
+	return (-1) * (localX/sideWidth) * 5 ;
+}
+
+document.querySelector('.parallax_1611').addEventListener('mousemove', function (event) {
+	var $parallaxContainer = document.querySelector('.parallax_1611');
+	var _clientWidth = $parallaxContainer.parentElement.clientWidth;
+	var _clientHeight = $parallaxContainer.parentElement.clientHeight;
+
+	// console.log(_clientWidth);
+ 	var sideWidth = _clientWidth / 2;
+ 	var sideHeight = _clientHeight / 2;
+ 	var bpX, bpY;
+
+ 	if ( sideWidth > event.clientX ){
+ 		// left side
+ 		bpX = nearSide(event.clientX, sideWidth);
+ 	} else {
+ 		// right side7
+ 		bpX = farSide(event.clientX, sideWidth);
+ 	}
+ 	 // bpX -= 40;
+
+ 	if ( sideHeight > event.clientY ){
+ 		// top side
+ 		bpY = nearSide(event.clientY, sideHeight);
+ 	} else {
+ 		// bottom side7
+ 		bpY = farSide(event.clientY, sideHeight);
+ 	}
+ 	// bpY += 5;
+
+ 	$parallaxContainer.style = 'background-position-x:' + bpX + 'vw; background-position-y:' + bpY + 'vh';
+	// console.log(bpX);
+});
+</script>
+</body>
+</html>
