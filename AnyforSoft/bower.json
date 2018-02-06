@@ -22,6 +22,7 @@
   "dependencies": {
     "jquery": "~2.2.0",
     "normalize-css": "~3.0.3",
-    "include-media": "~1.4.2"
+    "include-media": "~1.4.2",
+    "bootstrap-sass": "git://github.com/twbs/bootstrap-sass#^3.3.7"
   }
 }
