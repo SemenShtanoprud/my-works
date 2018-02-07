@@ -251,3 +251,454 @@ section.after_about{
     font-size: 48px;
   }
 }
+section.portfolio{
+  background-color: #1E1F24;
+  padding-bottom: 60px;
+  .p_h2{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 56px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+  .item{
+    background-color: #fff;
+    @include media('<=tablet') {
+      padding-bottom: 10px;
+    }
+    .container_owl_img {
+      position: relative;
+      max-width: 550px;
+      max-height: 500px;
+      @include media('<=tablet') {
+        margin: 0 auto;
+      }
+      &:before{
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 54%;
+        background: rgba(0,0,0,.5);
+        mix-blend-mode: normal;
+        z-index: 5;
+      }
+    }
+    .container_owl_content{
+      padding-top: 60px;
+      @include media('<=widescreen') {
+        padding-top: 30px;
+      }
+      @include media('<=tablet') {
+        padding-top: 10px;
+        text-align: center;
+      }
+      p.content_h2{
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        line-height: normal;
+        color: #1E1F24;
+        font-size: 56px;
+        margin-bottom: 48px;
+        @include media('<=widescreen') {
+          font-size: 46px;
+          margin-bottom: 25px;
+        }
+        @include media('<=mini-desc') {
+          font-size: 35px;
+          margin-bottom: 20px;
+        }
+        @include media('<=tablet') {
+          margin-bottom: 10px;
+          font-size: 25px;
+        }
+      }
+      p{
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: bold;
+        line-height: normal;
+        font-size: 24px;
+        letter-spacing: 0.15em;
+        text-transform: uppercase;
+        margin-bottom: 23px;
+        @include media('<=widescreen') {
+          margin-bottom: 15px;
+        }
+        @include media('<=mini-desc') {
+          font-size: 20px;
+          margin-bottom: 7px;
+        }
+        @include media('<=tablet') {
+          margin-bottom: 5px;
+          font-size: 18px;
+        }
+        span{
+          display: block;
+          font-weight: normal;
+          font-size: 15px;
+          line-height: 23px;
+          @include media('<=mini-desc') {
+            font-size: 13px;
+            line-height: 19px;
+          }
+          @include media('<=tablet') {
+            font-size: 10px;
+            line-height: 15px;
+          }
+        }
+      }
+      .button_view{  
+        width: 240px;
+        margin: 18px 0 0;
+        @include media('<=mini-desc') {
+          margin: 0 auto;
+        }
+        a{
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: 300;
+          line-height: normal;
+          font-size: 16px;
+          text-align: center;
+          letter-spacing: 0.15em;
+          border: 1px solid #1E1F24;
+          box-sizing: border-box;
+          border-radius: 2px;
+          color: #1E1F24;
+          border-radius: 2px;
+          padding: 24px 0;
+          display: block;
+          @include media('<=mini-desc') {
+            padding: 15px 0;
+          }
+          @include media('<=tablet') {
+            padding: 7px 0;
+          }
+        }
+      }
+    }
+  }
+  .owl-nav{
+      div{
+        background: transparent!important;
+        width: 23px;
+        padding: 0;
+        margin: 0;
+        height: 43px;
+        top: 0;
+        position: absolute;
+      }
+      .owl-prev{
+        left: -6%;
+        top: 50%;
+        @include media('<=tablet') {
+          left: 0;
+        }
+        &:after,
+        &:before{
+          content: "";
+          width: 2px;
+          height: 30px;
+          background-color: #fff;
+          position: absolute;
+          @include media('<=tablet') {
+            background-color: #000;
+          }
+        }
+        &:after{
+          transform: rotate(45deg);
+          top: 0;
+        }
+        &:before{
+          transform: rotate(135deg);
+          top: 21px;
+        }
+      }
+      .owl-next {
+        right: -6%;
+        top: 50%;
+        background-position: top right; 
+        @include media('<=tablet') {
+          right: 0;
+        }
+        &:after,
+        &:before{
+          content: "";
+          width: 2px;
+          height: 30px;
+          background-color: #fff;
+          position: absolute;
+          @include media('<=tablet') {
+            background-color: #000;
+          }
+        }
+        &:after{
+          transform: rotate(-45deg);
+          top: 0;
+        }
+        &:before{
+          transform: rotate(-135deg);
+          top: 21px;
+        }
+    }
+  }
+}
+section.why_we{
+  padding: 75px 0 115px;  
+  h2{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 48px;
+    text-align: center;
+    color: #1E1F24;
+    margin-bottom: 73px;
+  }
+  nav.why_we_container{
+    ul{
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      li{
+        display: inline-block;
+        list-style-type: none;
+        margin: 0 20px;
+        @include media('<=tablet') {
+          margin: 0 10px;
+        }
+        span{
+          background-image: url(images/icon_set_why.png);
+          width: 100px;
+          height: 100px;
+          display: block;
+          background-repeat: no-repeat;
+          margin: 0 auto;
+          background-position: 0px 0;
+        }
+        &:nth-child(2) span{
+          background-position: -119px 0;
+        }
+        &:nth-child(3) span{
+          background-position: -259px 0;
+        }
+        &:nth-child(4) span{
+          background-position: -399px 0;
+        }
+        &:nth-child(5) span{
+          background-position: -533px 0;
+        }
+        p{
+          font-family: Montserrat;
+          font-style: normal;
+          font-weight: normal;
+          line-height: 39px;
+          font-size: 16px;
+          text-align: center;
+          letter-spacing: 0.15em;
+          color: #1D1E23;
+        }
+      }
+    }
+  }
+}
+section.form_container{
+  background: #202020;
+  padding: 60px 0 36px;
+  .form_mail_cont{
+    text-align: center;
+    padding-bottom: 30px;
+    input{
+      height: 70px;
+    }
+    input[type="text"]{
+      background: #FFFFFF;
+      border: 1px solid #E7EAEF;
+      box-sizing: border-box;
+      border-radius: 2px;
+      width: 70%;
+      @include media('<=phone') {
+        width: 50%;
+      }
+    }
+    input[type="submit"]{
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+      font-size: 18px;
+      text-align: center;
+      letter-spacing: 0.15em;
+      color: #FFFFFF;
+      border-radius: 2px;
+      background: #11AD7F;
+      border-radius: 2px;
+      border: none;
+      padding: 10px 25px;
+      margin:-1px -5px;
+      @include media('<=phone') {
+        padding: 10px;
+      }
+    }
+  }
+  p{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 29px;
+    font-size: 16px;
+    text-align: center;
+    color: #FFFFFF;
+    opacity: 0.3;
+  }
+}
+section.our_service{
+  padding-top: 101px;
+  .button_view{  
+    width: 240px;
+    margin: 40px auto 0;
+    a{
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+      font-size: 16px;
+      text-align: center;
+      letter-spacing: 0.15em;
+      border: 1px solid #1E1F24;
+      box-sizing: border-box;
+      border-radius: 2px;
+      color: #1E1F24;
+      border-radius: 2px;
+      padding: 24px 0;
+      display: block;
+    }
+  }
+  .p_h2{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    line-height: normal;
+    font-size: 56px;
+    text-align: center;
+    color: #1E1F24;
+  }
+  ul.skill_nav{
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    li{
+      display: block;
+      list-style-type: none;
+      margin-bottom: 40px;
+      @include media('<=tablet') {
+        margin: 0 10px;
+        text-align: center;
+      }
+      span{
+        background-image: url(images/services_icon.png);
+        width: 70px;
+        height: 70px;
+        display: inline-block;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        background-position: 0px 0;
+        float: left;
+        @include media('<=tablet') {
+          float: none;
+          display: block;
+        }
+      }
+      &:nth-child(2) span{
+        background-position: -85px 0;
+      }
+      &:nth-child(3) span{
+        background-position: -170px 0;
+      }
+      p{
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        line-height: 57px;
+        font-size: 16px;
+        color: #1E1F24;
+        display: inline-block;
+        margin-left: 61px;
+        @include media('<=tablet') {
+          margin-left: 0;
+          line-height: 25px;
+        }
+      }
+    }
+  }
+  ul.skill_nav.right{
+    li{
+      display: block;
+      list-style-type: none;
+      margin-bottom: 40px;
+      @include media('<=tablet') {
+        text-align: center;
+      }
+      span{
+        background-image: url(images/services_icon.png);
+        width: 70px;
+        height: 70px;
+        display: inline-block;
+        background-repeat: no-repeat;
+        margin: 0 auto;
+        background-position: -259px 0;
+        float: left;
+        @include media('<=tablet') {
+          display: block;
+          float: none;
+        }
+      }
+      &:nth-child(2) span{
+        background-position: -347px 0;
+      }
+      &:nth-child(3) span{
+        background-position: -436px 0;
+      }
+      p{
+        @include media('<=tablet') {
+          display: block;
+          line-height: 25px;
+        }
+      }
+    }
+  }
+  .margit_top{
+    padding-top: 200px;
+    padding-bottom: 113px;
+  }
+  .container_ui{
+   .p_h3{
+     font-family: Montserrat;
+     font-style: normal;
+     font-weight: bold;
+     line-height: normal;
+     font-size: 24px;
+     letter-spacing: 0.15em;
+     color: #1E1F24;
+   } 
+   ul.ui_li{
+    li{
+      font-family: Montserrat;
+      font-style: normal;
+      font-weight: normal;
+      line-height: 29px;
+      font-size: 16px;
+      letter-spacing: 0.15em;
+      color: #1E1F24;
+      margin-bottom: 15px;
+      list-style-image: url(images/li_dots.png);
+    }
+   }
+  }
+}
