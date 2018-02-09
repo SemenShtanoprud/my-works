@@ -85,9 +85,9 @@
           <div class="col-lg-6 col-sm-6 col-xs-12">
             <nav class="top_menu_nav">
               <ul class="top_menu">
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Our services</a></li>
-                <li><a href="#">Portfolio</a></li>
+                <li><a href="#about_us">About us</a></li>
+                <li><a href="#our_service">Our services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
               </ul>
             </nav>
           </div>
@@ -123,7 +123,7 @@
   <article class="img_article">
     <img src="build/images/bgc_sec2.png" alt="">
   </article>
-  <section class="about_us">
+  <section id="about_us" class="about_us">
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
@@ -168,21 +168,45 @@
       </nav>
     </div>
   </section>
-<!--   <section class="after_about">
+  <section class="after_about">
     <div class="container">
       <div class="row">
-        <div class="col-lg-6">
-          <div class="tets"></div>
-          <img src="build/images/face_icon.png" alt="">
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+          <div class="after_about_container_img">
+            <div class="tets"></div>
+            <img src="build/images/face_icon.png" alt="">
+          </div>
         </div>
-        <div class="col-lg-6">
-          <h3>Drupal solutions <br>as a primary focus</h3>
-          <p>The majority of our projects are made with Drupal, <br>though we still could work with other technologies</p>
+        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+          <div class="after_about_container_content">
+            <p class="p_h3">Drupal solutions <br>as a primary focus</p>
+            <p class="p_p">The majority of our projects are made with Drupal, <br>though we still could work with other technologies</p>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-1 hidden-md hidden-sm hidden-xs"></div>
+        <div class="col-lg-6 col-md-6">
+          <div class="after_about_container_cont">
+            <p class="p_h3">Community <br>& Open-source</p>
+            <ul class="after_ul">
+              <li>Silver sponsor of Drupal Camp Kyiv 2016</li>
+              <li>Sponsor at Drupal Iron Camp ‘16</li>
+              <li>Host of Drupal Café Kharkiv</li>
+              <li>Active member of Drupal.org community since 2014 </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-5 col-md-6 ">
+          <div class="after_about_container_img_right">
+            <div class="tets"></div>
+            <img src="build/images/sec_about_figure.png" alt="">
+          </div>
         </div>
       </div>
     </div>
-  </section> -->
-  <section class="portfolio">
+  </section>
+  <section id="portfolio" class="portfolio">
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
@@ -282,19 +306,19 @@
       </div>
     </div>
   </section>
-  <section class="our_service">
+  <section id="our_service" class="our_service">
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
           <div class="section_button">
-            <h2>about us</h2>
+            <h2>our service</h2>
             <p class="p_h2">What we can do</p>
           </div>
         </div>
       </div>
       <div class="row">
         <div class="col-lg-7 col-md-6 col-xs-12">
-          <ul class="skill_nav">
+          <ul class="skill_nav left">
             <li>
               <span></span>
               <p>DRUPAL 7 & 8 CUSTOM DEVELOPMENT</p>
@@ -418,6 +442,7 @@
       </div>
     </div>
   </footer>
+
 
 
   <script src="build/vendor.js"></script>
