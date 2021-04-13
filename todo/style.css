@@ -1,0 +1,137 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.align-center {
+    align-items: center;
+}
+
+.container {
+    max-width: 500px;
+    background-color: #ccc;
+    padding: 25px;
+    margin: 0 auto;
+}
+
+.title {
+    text-align: center;
+}
+
+.todo-form {
+    max-width: 50%;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.todo-input {
+    border: 1px solid #000;
+    background: transparent;
+    padding: 10px;
+    border-radius: 10px 0 0 10px;
+    border-right: none;
+    width: 75%;
+    outline: none;
+    transition: .5s;
+}
+
+.todo-input:hover,
+.todo-input:focus {
+    box-shadow: -5px 0px 10px #000;
+}
+
+.todo-submit {
+    background: transparent;
+    border: 1px solid #000;
+    border-radius: 0 10px 10px 0;
+    outline: none;
+    cursor: pointer; 
+    transition: .5s;
+
+}
+
+.todo-submit:hover {
+    box-shadow: 5px 0px 10px #000;
+}
+
+.checkbox-container {
+    padding: 10px 0;
+}
+
+.important-item {
+    display: block;
+}
+
+/* list-items */
+.list-item {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid transparent;
+    border-bottom-color: #000;
+}
+
+.important-list {
+    border: 1px solid red;
+}
+
+.item-done {
+    text-decoration: line-through;
+    border: 1px solid green;
+}
+
+.list-item:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.list-item span {
+    word-wrap: break-word;
+    width: 80%;
+}
+
+.done-element,
+.remove-element {
+    border: 1px solid #000;
+    background: transparent;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+    margin: auto 10px;
+}
+
+.done-element:before,
+.done-element:after,
+.remove-element:before,
+.remove-element:after {
+    content: "";
+    width: 1px;
+    height: 10px;
+    background-color: #000;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.done-element:before {
+    left: 40%;
+    transform: translate(-100%, -50%) rotate(-28deg);
+}
+
+.done-element:after {
+    right: 40%;
+    left: auto;
+    transform: translate(100%, -50%) rotate(28deg);
+}
+
+.remove-element:before {
+    transform: translate(-50%, -50%) rotate(-40deg);
+}
+
+.remove-element:after {
+    transform: translate(-50%, -50%) rotate(40deg);
+}
